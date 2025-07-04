@@ -67,7 +67,7 @@ def saldar():
         fale('Boa nnoite mestre Bolacha')
 
 def previsao_tempo():
-    apiKey = '92e75be653b1f05e3f69e092c11f4e3e'
+    apiKey = 'APIKey'
     response = requests.get(f'http://api.openweathermap.org/data/2.5/weather?q=guarulhos&appid={apiKey}&units=metric')
     x = response.json()
     if x["cod"] != "404":
@@ -114,7 +114,7 @@ def chatgpt():
     fale('O que deseja que eu pesquise?')
     pesquisa = ouvir()
     # Configura a chave de API da OpenAI usando a variável de ambiente 'OPENAI_API_KEY'
-    os.environ['OPENAI_API_KEY'] = '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'
+    os.environ['OPENAI_API_KEY'] = 'apikey'
     openai.api_key = os.environ.get('OPENAI_API_KEY')
 
     # Envia uma requisição à API do ChatCompletion usando o modelo GPT-3.5 Turbo
